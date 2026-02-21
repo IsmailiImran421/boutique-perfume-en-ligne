@@ -3,6 +3,7 @@
 Sillage est une plateforme e-commerce (Web et Mobile) ambitieuse qui vise à devenir la référence absolue du parfum authentique au Maroc. Plus qu'un simple site de vente, Sillage se positionne comme un conseiller personnel pour aider chaque client à trouver sa "perle rare" en toute sérénité.
 
 📌 Le Constat
+
 Le marché numérique marocain souffre d'un manque de confiance concernant l'authenticité des parfums. Les clients hésitent souvent par peur de tomber sur des contrefaçons et par manque d'informations détaillées sur les produits. Sillage intervient pour offrir du vrai, du beau et de la réassurance.
 
 ✨ Nos Points Forts 
@@ -26,6 +27,7 @@ Les Cadeaux de Prestige : Ceux qui souhaitent offrir un cadeau de luxe sans risq
 Les Jeunes Actifs : Une clientèle connectée qui privilégie le gain de temps sans sacrifier la qualité.
 
 🚀 Vision de Développement (Roadmap)
+
 Le projet ne s'arrête pas à la parfumerie fine:
 
 [ ] Soins Haut de Gamme : Introduction de gammes cosmétiques de luxe.
@@ -35,6 +37,7 @@ Le projet ne s'arrête pas à la parfumerie fine:
 [ ] Showroom Moderne : Création d'un espace physique "Phygital" pour découvrir les nouveautés avant de commander en un clic.
 
 🛠️ Stack Technique
+
 Frontend : [React.js]
 
 Backend : [Laravel]
