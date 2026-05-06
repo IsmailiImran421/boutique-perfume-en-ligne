@@ -7,5 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Panier extends Model
 {
-    use HasFactory;
+    protected $fillable = [
+        'user_id',
+        'session_id'
+    ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

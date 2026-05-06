@@ -7,5 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class NoteOlfactive extends Model
 {
-    use HasFactory;
+        protected $fillable = [
+        'nom',
+        'type'
+    ];
+
+    public function parfums()
+    {
+        return $this->belongsToMany(Parfum::class);
+    }
 }

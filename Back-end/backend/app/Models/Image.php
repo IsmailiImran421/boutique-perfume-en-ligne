@@ -7,5 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Image extends Model
 {
-    use HasFactory;
+        protected $fillable = [
+        'url',
+        'parfum_id',
+        'is_main'
+    ];
+
+    public function parfum()
+    {
+        return $this->belongsTo(Parfum::class);
+    }
 }
