@@ -1,0 +1,463 @@
+/* PREMIUM AUTHENTICITY PAGE STYLES */
+
+.authenticity-page {
+  background-color: #000;
+  color: #fff;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+.authenticity-page .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Hero Section */
+.auth-hero {
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  width: 85%;
+  margin: auto;
+  margin-top: 200px;
+  margin-bottom: 60px;
+  border-radius: 30px;
+}
+
+
+.auth-hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.auth-hero-tagline {
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 13px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.auth-hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.auth-hero-subtitle {
+  font-size: 16px;
+  color: #ddd;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+/* Features Grid */
+.auth-features {
+  padding: 60px 0;
+  margin-top: -50px;
+  position: relative;
+  z-index: 10;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.feature-card {
+  background: #111;
+  padding: 40px 30px;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.4s ease;
+}
+
+.feature-card:hover {
+  background: #161616;
+  border-color: var(--gold);
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  margin-bottom: 25px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.feature-card h3 {
+  color: var(--gold);
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.feature-card p {
+  font-size: 13px;
+  color: #888;
+  line-height: 1.7;
+}
+
+/* FAQ Section */
+.auth-faq {
+  margin-top: 40px;
+  margin-bottom: 70px;
+}
+
+.faq-section-title {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  margin: 60px auto 40px;
+  position: relative;
+  display: block;
+  width: fit-content;
+  margin-bottom: 100px;
+}
+
+.faq-section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--gold);
+}
+
+.faq-list {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 25px 0;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.faq-question:hover {
+  color: var(--gold);
+}
+
+.faq-toggle {
+  color: var(--gold);
+  font-size: 20px;
+}
+
+.faq-answer {
+  padding-top: 20px;
+  color: #777;
+  font-size: 14px;
+  line-height: 1.8;
+  max-width: 95%;
+  display: none;
+}
+
+.faq-item.active .faq-answer {
+  display: block;
+  animation: slideDown 0.4s ease-out;
+}
+
+/* CTA Section */
+.auth-cta-container {
+  padding: 60px 0;
+}
+
+.auth-cta {
+  background-size: cover;
+  background-position: center;
+  height: 450px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.auth-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.auth-cta-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 600px;
+}
+
+.cta-user-icon {
+  font-size: 40px;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+
+.auth-cta h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+.auth-cta p {
+  color: #aaa;
+  margin-bottom: 35px;
+  font-size: 15px;
+}
+
+.cta-btn {
+  background: var(--gold);
+  color: #000;
+  border: none;
+  padding: 18px 45px;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+  background: #c5a02c;
+  transform: translateY(-3px);
+}
+
+/* Testimonials */
+.auth-testimonials {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.testimonials-grid {
+  display: flex;
+  overflow-x: auto;
+  gap: 25px;
+  margin-top: 50px;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+  scroll-snap-type: x mandatory;
+}
+
+/* Custom scrollbar for testimonials */
+.testimonials-grid::-webkit-scrollbar {
+  height: 6px;
+}
+.testimonials-grid::-webkit-scrollbar-track {
+  background: #1a1a1a;
+  border-radius: 10px;
+}
+.testimonials-grid::-webkit-scrollbar-thumb {
+  background: var(--gold);
+  border-radius: 10px;
+}
+
+.testimonial-card {
+  background: #0d0d0d;
+  padding: 35px;
+  border-radius: 5px;
+  text-align: left;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  min-width: 350px;
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+}
+
+.stars {
+  color: var(--gold);
+  margin-bottom: 15px;
+  display: block;
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+
+.testimonial-text {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 30px;
+  line-height: 1.7;
+  height: 80px;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.author-avatar {
+  width: 45px;
+  height: 45px;
+  background: #222;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--gold);
+}
+
+.author-info h4 {
+  font-size: 14px;
+  margin-bottom: 3px;
+  font-weight: 500;
+}
+
+.verified {
+  font-size: 11px;
+  color: #4CAF50;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.verified-check {
+  background: #4CAF50;
+  color: #fff;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8px;
+}
+
+/* Feedback Form */
+.auth-feedback {
+  padding: 80px 0 120px;
+  max-width: 900px;
+  margin: 60px auto;
+  text-align: center;
+}
+
+.feedback-form {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  background: #111;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 18px 25px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 14px;
+  width: 65%;
+  margin: auto;
+  border: 1px solid var(--gold);
+}
+
+.feedback-form textarea {
+  height: 180px;
+  resize: none;
+
+}
+
+.submit-btn {
+  background: var(--gold);
+  color: #000;
+  border: none;
+  padding: 18px 60px;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  align-self: center;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  background: #886e20;
+  transform: translateY(-3px);
+}
+
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 992px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-hero-title {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonial-card {
+    min-width: 85vw;
+  }
+
+  .auth-hero {
+    width: 95% !important;
+    margin-top: 120px !important;
+    height: 300px;
+  }
+
+  .faq-section-title {
+    font-size: 26px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+  }
+
+  .feedback-form input,
+  .feedback-form textarea {
+    width: 100% !important;
+  }
+
+  .feature-card {
+    padding: 30px 20px;
+  }
+
+  .submit-btn {
+    width: 100%;
+  }
+
+  .auth-features {
+    margin-top: -30px;
+  }
+}

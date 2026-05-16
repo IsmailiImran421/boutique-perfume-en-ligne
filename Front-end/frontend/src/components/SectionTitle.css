@@ -1,0 +1,71 @@
+.section-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 80px;
+  width: 100%;
+  position: relative;
+}
+
+/* Logic: if it contains a view-all link, align title to left and link to right */
+.section-header:has(.view-all) {
+  justify-content: space-between;
+  text-align: left;
+  align-items: flex-end;
+}
+
+.title-group {
+  max-width: 800px;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  color: var(--gold);
+  margin-bottom: 5px;
+  text-transform: capitalize;
+}
+
+.section-subtitle {
+  color: var(--grey-text);
+  font-size: 15px;
+  letter-spacing: 0.5px;
+}
+
+.view-all {
+  color: var(--gold);
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: var(--transition-smooth);
+  text-decoration: none;
+}
+
+.view-all:hover {
+  color: var(--white);
+}
+
+.view-all .arrow {
+  font-size: 30px;
+  transition: transform 0.3s ease;
+}
+
+.view-all:hover .arrow {
+  transform: translateX(5px);
+}
+
+@media (max-width: 992px) {
+  .section-header:has(.view-all) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+}

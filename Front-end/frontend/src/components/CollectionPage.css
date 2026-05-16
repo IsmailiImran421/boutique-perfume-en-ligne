@@ -1,0 +1,217 @@
+.collection-page {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.gold-titles .section-title {
+  color: var(--gold) !important;
+}
+
+/* Hero Section */
+.collection-hero-container {
+  background-color: var(--black);
+  padding: 120px 40px 40px 40px;
+  /* Space for fixed navbar */
+}
+
+.collection-banner {
+  height: 520px;
+  width: 90%;
+  margin: auto;
+  margin-top: 50px;
+  border-radius: 40px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.banner-content {
+  text-align: center;
+}
+
+.banner-title {
+  font-family: "Playfair Display", serif;
+  font-size: 110px;
+  letter-spacing: 20px;
+  margin: 0;
+  color: var(--white);
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.banner-subtitle {
+  font-size: 40px;
+  font-family: "Dancing Script", cursive;
+  color: var(--white);
+  margin-top: -20px;
+}
+
+/* Season Sections */
+.season-section {
+  margin-top: 80px;
+  margin-bottom: 60px;
+}
+
+.season-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  font-family: "Playfair Display", serif;
+  color: var(--white);
+  text-transform: capitalize;
+}
+
+.no-products {
+  color: var(--grey-text);
+  font-style: italic;
+  padding: 20px 0;
+}
+
+/* Horizontal Scroll logic */
+.horizontal-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 30px;
+  padding: 0 0 30px 0;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(212, 175, 55, 0.5) transparent;
+}
+
+.horizontal-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.horizontal-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.horizontal-scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(212, 175, 55, 0.5);
+  border-radius: 3px;
+}
+
+.scroll-item {
+  flex: 0 0 200px;
+  min-width: 200px;
+}
+
+/* Promo Banner */
+.promo-banner-container {
+  margin: 100px auto;
+  width: 100%;
+  padding: 0 0;
+}
+
+.promo-banner-img {
+  width: 100%;
+  border-radius: 25px;
+  height: 380px;
+  object-fit: cover;
+  display: block;
+  box-shadow:
+    0 25px 60px rgba(212, 175, 55, 0.15),
+    0 15px 40px rgba(0, 0, 0, 0.4);
+  transition: all 0.5s ease;
+}
+
+.promo-banner-img:hover {
+  transform: translateY(-5px);
+  box-shadow:
+    0 35px 80px rgba(212, 175, 55, 0.2),
+    0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.spacer-50 {
+  height: 50px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .banner-title {
+    font-size: 70px;
+    letter-spacing: 10px;
+  }
+
+  .collection-hero-container {
+    padding: 100px 20px 20px 20px;
+  }
+
+  .collection-banner {
+    height: 300px;
+  }
+
+  .season-section {
+    margin-top: 60px;
+    margin-bottom: 40px;
+  }
+
+  .promo-banner-img {
+    height: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner-title {
+    font-size: 50px;
+    letter-spacing: 5px;
+  }
+
+  .banner-subtitle {
+    font-size: 25px;
+  }
+
+  .collection-banner {
+    height: 250px;
+  }
+
+  .season-title {
+    font-size: 20px;
+  }
+
+  .promo-banner-img {
+    height: 220px;
+    border-radius: 15px;
+  }
+
+  .scroll-item {
+    flex: 0 0 160px;
+    min-width: 160px;
+  }
+
+  .promo-banner-container {
+    margin: 60px auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-title {
+    font-size: 35px;
+    letter-spacing: 2px;
+  }
+
+  .banner-subtitle {
+    font-size: 18px;
+    margin-top: -10px;
+  }
+
+  .collection-banner {
+    height: 180px;
+  }
+
+  .season-title {
+    font-size: 18px;
+  }
+
+  .promo-banner-img {
+    height: 180px;
+    border-radius: 12px;
+  }
+
+  .promo-banner-container {
+    margin: 40px auto;
+  }
+}

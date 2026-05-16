@@ -1,0 +1,253 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+  transition: var(--transition-smooth);
+  background: transparent;
+}
+
+.navbar.scrolled {
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(10px);
+  height: 90px;
+}
+
+.navbar-container {
+  width: 100%;
+  padding: var(--container-padding);
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo,
+.navbar-icons {
+  flex: 1;
+}
+
+.navbar-icons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.navbar-menu {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.logo-img {
+  height: 130px;
+  width: auto;
+  object-fit: contain;
+  transition: var(--transition-smooth);
+}
+
+.navbar.scrolled .logo-img {
+  height: 90px;
+}
+
+/* navbar-menu logic moved up */
+
+.navbar-menu li a {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: var(--white);
+  padding: 10px 0;
+  position: relative;
+}
+
+.navbar-menu li a.active,
+.navbar-menu li a:hover,
+.dropdown-trigger.active,
+.dropdown-trigger:hover {
+  color: var(--gold);
+}
+
+.navbar-menu li a::after,
+.dropdown-trigger::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--gold);
+  transition: var(--transition-smooth);
+}
+
+.navbar-menu li a:hover::after,
+.navbar-menu li a.active::after,
+.dropdown-trigger:hover::after,
+.dropdown-trigger.active::after {
+  width: 100%;
+}
+
+.dropdown-trigger {
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--dark-grey);
+  min-width: 200px;
+  padding: 15px 0;
+  border-radius: 0 0 8px 8px;
+  display: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li a {
+  padding: 10px 20px;
+  display: block;
+}
+
+/* navbar-icons and navbar-menu logic moved up to .navbar-container for centering */
+
+.mobile-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+  padding: 10px;
+}
+
+.mobile-toggle .bar {
+  width: 25px;
+  height: 2px;
+  background-color: var(--white);
+  transition: var(--transition-smooth);
+}
+
+.navbar.menu-open .mobile-toggle .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.navbar.menu-open .mobile-toggle .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar.menu-open .mobile-toggle .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.icon-btn {
+  color: var(--white);
+  transition: var(--transition-smooth);
+}
+
+.icon-btn:hover {
+  color: var(--gold);
+  transform: translateY(-2px);
+}
+
+.arrow {
+  font-size: 10px;
+  margin-left: 5px;
+}
+
+@media (max-width: 992px) {
+  .mobile-toggle {
+    display: flex;
+    margin-left: auto;
+  }
+
+  .navbar-icons {
+    display: none;
+  }
+
+  .navbar-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%; /* Full width for better centering */
+    height: 100vh;
+    background: #000;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+  }
+
+  .navbar-menu.active {
+    right: 0;
+  }
+
+  .navbar-menu li {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .navbar-menu li a {
+    font-size: 20px;
+    font-weight: 600;
+    width: fit-content;
+    text-align: center;
+  }
+
+  .dropdown {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dropdown-trigger {
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .dropdown-menu {
+    position: static;
+    transform: none;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    text-align: center;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    max-height: 300px;
+    margin-top: 20px;
+  }
+
+  .dropdown-menu li a {
+    font-size: 16px;
+    color: #888;
+    padding: 10px 0;
+  }
+
+  .logo-img {
+    height: 70px;
+  }
+}

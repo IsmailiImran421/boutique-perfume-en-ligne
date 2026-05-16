@@ -1,0 +1,30 @@
+.product-section {
+  padding-bottom: 60px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.loader,
+.error {
+  text-align: center;
+  padding: 50px 0;
+  color: var(--gold);
+}
+
+@media (max-width: 1200px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    ;
+  }
+}
